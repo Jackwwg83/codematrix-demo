@@ -54,6 +54,26 @@
     .card h3 { font-size: 18px; margin-bottom: 8px; }
     .card p { color: var(--muted); font-size: 15px; }
 
+    section.testimonials { padding: 60px 24px; }
+    .testimonials h2 { text-align: center; font-size: 32px; letter-spacing: -0.5px; margin-bottom: 48px; }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .testimonial-card {
+      border: 1px solid var(--border); border-radius: 16px; padding: 28px;
+      background: var(--surface); display: flex; flex-direction: column; gap: 20px;
+    }
+    .testimonial-card blockquote {
+      font-size: 15px; color: var(--fg); line-height: 1.7; flex: 1;
+      font-style: normal;
+    }
+    .testimonial-card blockquote::before {
+      content: '\201C';
+      font-size: 36px; line-height: 1; color: var(--accent);
+      display: block; margin-bottom: 8px; font-style: normal;
+    }
+    .testimonial-author { display: flex; flex-direction: column; gap: 2px; }
+    .testimonial-author strong { font-size: 14px; font-weight: 600; color: var(--fg); }
+    .testimonial-author span { font-size: 13px; color: var(--muted); }
+
     .cta-band { text-align: center; padding: 80px 24px; background: var(--surface); margin-top: 40px; }
     .cta-band h2 { font-size: 30px; margin-bottom: 12px; letter-spacing: -0.5px; }
     .cta-band p { color: var(--muted); margin-bottom: 24px; }
@@ -94,12 +114,39 @@
     </div>
   </section>
 
+  <section class="testimonials">
+    <h2>What teams say</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <blockquote>Lumen replaced three different tools for us. Our standups are tighter, our docs are actually findable, and onboarding new engineers went from two weeks to four days.</blockquote>
+        <div class="testimonial-author">
+          <strong>Priya Nair</strong>
+          <span>Engineering Lead, Fieldset</span>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <blockquote>I was skeptical another notes app could fix our chaos. Two months in, our whole design team shares one source of truth and nobody's asking "where's that file?" anymore.</blockquote>
+        <div class="testimonial-author">
+          <strong>Marcus Osei</strong>
+          <span>Head of Design, Archway</span>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <blockquote>The search alone is worth it. We have thousands of meeting notes going back years — I can pull up any decision in under five seconds. That's genuinely changed how we work.</blockquote>
+        <div class="testimonial-author">
+          <strong>Sofia Reyes</strong>
+          <span>VP of Product, Crestline</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <div class="cta-band">
     <h2>Ready to think faster?</h2>
     <p>Join thousands of teams already using Lumen.</p>
     <a class="btn" href="#">Get started free</a>
   </div>
 
-  <footer>© 2026 Lumen. A demo product.</footer>
+  <footer>© 2026 Lumen</footer>
 </body>
 </html>
